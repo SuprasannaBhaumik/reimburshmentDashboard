@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+  xmlns:beans="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security.xsd">
+	
+	<http auto-config="true" use-expressions="true" >
+
+	    	
+		<intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')" />	
+		<access-denied-handler error-page="/accessDenied" />
+		<intercept-url pattern="/login" access="permitAll"/>
+		<intercept-url pattern="/images**" access="permitAll"/>
+		<intercept-url pattern="/home" access="permitAll"/>
+		<intercept-url pattern="/logout" access="permitAll"/>
+		<intercept-url pattern="/accessdenied" access="permitAll"/>
+		<intercept-url pattern="/**" access="permitAll"/>
+		<!-- hasRole('ROLE_USER') -->
+		<form-login login-page="/login" 
+					authentication-failure-url="/login?error" 
+					default-target-url="/home"
+					
+					/> 
+		<logout logout-success-url="/login?logout" />
+	</http>
+	
+	<authentication-manager>
+		
+	 	<authentication-provider>
+	   
+	 <!--   <user-service>
+				<user name="suprasanna" password="root" authorities="ROLE_USER"/>
+				<user name="sayantani" password="sanu" authorities="ROLE_USER"/>
+			</user-service>  -->
+		
+			<!-- <jdbc-user-service data-source-ref="dataSource"
+		  	users-by-username-query=
+		   	 "select USERNAME,PASSWORD,ENABLED from USERS where USERNAME=? and ENABLED=1"
+		  	authorities-by-username-query=
+		   	 "select USERNAME,ROLE from USER_ROLES where USERNAME=?" /> -->
+		   	 <user-service>
+				<user name="suprasanna" password="root" authorities="ROLE_USER"/>
+				<user name="sayantani" password="sanu" authorities="ROLE_USER"/>
+			</user-service>
+	  	</authentication-provider>
+	</authentication-manager>
+	
+	<!-- for LDAP configuration
+    
+	<security:http auto-config="false">
+        <security:intercept-url pattern="/**" access="ROLE_KOEADMIN" />
+        <security:form-login />
+        <security:anonymous />
+        <security:logout />
+    </security:http>
+     <security:ldap-server id="ok_ldap" url="ldap://ldap.mydomain.no:389/"/>
+    <security:ldap-authentication-provider 
+            server-ref="ok_ldap"
+            group-search-filter="cn={0}" 
+            group-search-base="(ou=Auth, dc=mydomain, dc=no)"
+            user-search-filter="(employeeNumber={0})"
+            user-search-base="ou=People, dc=mydomain, dc=no"
+            >
+        <security:password-compare hash="md5"/>
+    </security:ldap-authentication-provider> -->
+	
+	
+</beans:beans>	
