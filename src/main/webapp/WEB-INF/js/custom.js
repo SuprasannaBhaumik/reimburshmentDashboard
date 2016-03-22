@@ -8,5 +8,13 @@ myApp.controller("myController",function($scope){
 
 myApp.controller("PanelController",function($scope){
 	
+	this.tab=1;
+	this.selectTab = function(selectedTab){
+		this.tab = selectedTab;
+	}
+	this.isSelected=function(tabInQues){
+		return this.tab === tabInQues;
+	}
+	
 	
 });
