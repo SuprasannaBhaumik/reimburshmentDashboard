@@ -16,5 +16,17 @@ myApp.controller("PanelController",function($scope){
 		return this.tab === tabInQues;
 	}
 	
+	this.expander=false;
+	this.symbol="+";
+	this.expanderClicked=function(){
+		if(this.expander === true){
+			this.expander=false;
+			this.symbol="+";
+		}else if(this.expander===false){
+			this.expander=true;
+			this.symbol="-";
+		}
+	};
+	
 	
 });

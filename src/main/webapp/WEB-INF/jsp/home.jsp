@@ -232,10 +232,10 @@ body {
 		<div class="answer" style="display: none;">jqGridTable with
 			pending records</div>
 		<br />
-		<div class="question">
-			<span>+</span>Cancelled Request
+		<div ng-click="panel.expanderClicked()">
+			<span>{{panel.symbol}}</span>Cancelled Request
 		</div>
-		<div class="answer" style="display: none;">jqGridTable with
+		<div ng-show="panel.expander">jqGridTable with
 			cancelled records</div>
 	</div>
 
