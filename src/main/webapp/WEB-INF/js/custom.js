@@ -6,3 +6,7 @@ myApp.controller("myController",function($scope){
 });
 
 
+myApp.controller("PanelController",function($scope){
+	
+	
+});
