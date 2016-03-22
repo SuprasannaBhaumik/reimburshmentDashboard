@@ -17,7 +17,7 @@ myApp.controller("PanelController",function($scope){
 	}
 	
 	this.expander=false;
-	this.symbol="+";
+	this.symbol="+"; 
 	this.expanderClicked=function(){
 		if(this.expander === true){
 			this.expander=false;

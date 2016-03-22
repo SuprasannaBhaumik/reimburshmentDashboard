@@ -1,7 +1,7 @@
 <%@taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<html ng-app="myModule">
+<html ng-app="myModule" >
 <head>
 <meta charset="utf-8">
 <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
