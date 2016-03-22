@@ -186,7 +186,8 @@ body {
 
 	<hr />
 
-	<section ng-controller="PanelController as panel">
+<div ng-controller="PanelController as panel">
+	<section >
 		<ul>
 			<li ng-class="{active:panel.isSelected(1)}">
 				<a href ng-click="panel.selectTab(1)">Employee</a>
@@ -238,6 +239,6 @@ body {
 			cancelled records</div>
 	</div>
 
-
+</div>
 </body>
 </html>
