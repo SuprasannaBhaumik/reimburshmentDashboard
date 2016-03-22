@@ -28,5 +28,23 @@ myApp.controller("PanelController",function($scope){
 		}
 	};
 	
+	this.defaultExpander = [];
+	this.defaultExpander.initValue=0;
+	this.defaultExpander.flag=true;
+	this.setExpander=function(clickedExpander,flag){
+		if(this.defaultExpander.flag===flag){
+			this.defaultExpander.initValue=clickedExpander;
+			this.defaultExpander.symbol="-";
+			this.defaultExpander.flag=false;
+		}else{
+			this.defaultExpander.flag=true;
+			this.defaultExpander.symbol="+";
+			this.defaultExpander.initValue=0;
+		}
+	}
+	this.isExpanderClicked=function(expVal){
+		return this.defaultExpander.initValue===expVal;
+	}
+	
 	
 });

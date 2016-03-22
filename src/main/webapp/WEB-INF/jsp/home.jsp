@@ -10,6 +10,10 @@
 	href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
 <link rel="stylesheet" type="text/css"
 	href="http://www.trirand.com/blog/jqgrid/themes/ui.jqgrid.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" />	
+	<!-- https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css -->
 <script
 	src="http://www.trirand.com/blog/jqgrid/js/i18n/grid.locale-en.js"
 	type="text/javascript"></script>
@@ -22,6 +26,8 @@
 
 <script
 	src="https://rawgit.com/SuprasannaBhaumik/reimburshmentDashboard/master/src/main/webapp/WEB-INF/js/custom.js"></script>
+	
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
 <style>
 body {
 	font: 100% "Trebuchet MS", sans-serif;
@@ -187,8 +193,8 @@ body {
 	<hr />
 
 <div ng-controller="PanelController as panel">
-	<section >
-		<ul>
+	<section class="tab">
+		<ul class="nav nav-pills">
 			<li ng-class="{active:panel.isSelected(1)}">
 				<a href ng-click="panel.selectTab(1)">Employee</a>
 			</li>
@@ -226,17 +232,21 @@ body {
 		<div class="answer" style="display: none;">jqGridTable with
 			approved records</div>
 		<br />
-		<div class="question">
+		
+		<div ng-click="panel.setExpander(2,true)">
 			<span>+</span>Pending Request
 		</div>
-		<div class="answer" style="display: none;">jqGridTable with
-			pending records</div>
+		<div ng-show="panel.isExpanderClicked(2)">jqGridTable with pending records</div>
+		
 		<br />
+		
 		<div ng-click="panel.expanderClicked()">
 			<span>{{panel.symbol}}</span>Cancelled Request
 		</div>
-		<div ng-show="panel.expander">jqGridTable with
-			cancelled records</div>
+		<div ng-show="panel.expander">
+			<p>jqGridTable with cancelled records</p>
+			<p ng-show="panel.expander" align="right"><a href style="color: orange;font-size:11px !important;">Show more</a></p>
+		</div>
 	</div>
 
 </div>
