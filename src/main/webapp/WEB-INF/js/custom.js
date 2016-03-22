@@ -31,6 +31,7 @@ myApp.controller("PanelController",function($scope){
 	this.defaultExpander = [];
 	this.defaultExpander.initValue=0;
 	this.defaultExpander.flag=true;
+	this.defaultExpander.symbol="+";
 	this.setExpander=function(clickedExpander,flag){
 		if(this.defaultExpander.flag===flag){
 			this.defaultExpander.initValue=clickedExpander;
