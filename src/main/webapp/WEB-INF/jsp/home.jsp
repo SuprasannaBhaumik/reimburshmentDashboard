@@ -121,7 +121,7 @@ body {
 	<%@ include file="header.jsp"%>
 
 
-	<div id="tabs"
+	<!-- <div id="tabs"
 		class="ui-tabs ui-widget ui-widget-content ui-corner-all">
 		<ul
 			class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"
@@ -178,11 +178,11 @@ body {
 			<div class="answer" style="display: none;">jqGridTable with
 				cancelled records</div>
 		</div>
-	</div>
-	<div>
+	</div> -->
+	<!-- <div>
 		10 + 20 ::: {{10+20}} <br /> {{ {name:'Suprasanna',age:'30'}.name }}
 	</div>
-	<b>{{10+20}}</b>
+	<b>{{10+20}}</b> -->
 
 	<hr />
 
