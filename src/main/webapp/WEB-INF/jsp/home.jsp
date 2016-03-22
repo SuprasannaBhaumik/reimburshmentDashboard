@@ -26,7 +26,8 @@
 
 <script
 	src="https://rawgit.com/SuprasannaBhaumik/reimburshmentDashboard/master/src/main/webapp/WEB-INF/js/custom.js"></script>
-	
+	<!-- https://raw.githubusercontent.com/SuprasannaBhaumik/reimburshmentDashboard/master/src/main/webapp/WEB-INF/js/custom.js -->
+	<!-- https://rawgit.com/SuprasannaBhaumik/reimburshmentDashboard/master/src/main/webapp/WEB-INF/js/custom.js -->
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
 <style>
 body {
@@ -205,47 +206,47 @@ body {
 	</section>
 
 	<div class="panel" ng-show="panel.isSelected(1)">
-		<div class="question">
-			<span>+</span>Last 5 transactions
+		<div ng-click="panel.setExpander(4,true)">
+			<span>{{panel.isExpanderClicked(4)===true?"-":"+"}}</span>Last 5 transactions
 		</div>
-		<div class="answer" style="display: none;">
+		<div ng-show="panel.isExpanderClicked(4)">
 			<table id="last5TransGrid">
 				<tr>
 					<td />
 				</tr>
 			</table>
+			<p ng-show="panel.isExpanderClicked(4)" align="right"><a href style="color: orange;font-size:11px !important;">Show more</a></p>
 		</div>
 		<br />
-		<div class="question">
-			<span>+</span>Submit New
+		<div ng-click="panel.setExpander(5,true)">
+			<span>{{panel.isExpanderClicked(5)===true?"-":"+"}}</span>Submit New
 		</div>
-		<div class="answer" style="display: none;">
-			<a target="_blank" href="http://www.google.com">Link to New
-				Window</a>
+		<div ng-show="panel.isExpanderClicked(5)">
+			<a target="_blank" href="http://www.google.com">Link to New Window</a>
 		</div>
 	</div>
 
 	<div class="panel" ng-show="panel.isSelected(2)">
-		<div class="question">
-			<span>+</span>Approved Request
+		<div ng-click="panel.setExpander(1,true)">
+			<span>{{panel.isExpanderClicked(1)===true?"-":"+"}}</span>Approved Request
 		</div>
-		<div class="answer" style="display: none;">jqGridTable with
-			approved records</div>
+		<div ng-show="panel.isExpanderClicked(1)">jqGridTable with approved records</div>
+		
 		<br />
 		
 		<div ng-click="panel.setExpander(2,true)">
-			<span>+</span>Pending Request
+			<span>{{panel.isExpanderClicked(2)===true?"-":"+"}}</span>Pending Request
 		</div>
 		<div ng-show="panel.isExpanderClicked(2)">jqGridTable with pending records</div>
 		
 		<br />
 		
-		<div ng-click="panel.expanderClicked()">
-			<span>{{panel.symbol}}</span>Cancelled Request
+		<div ng-click="panel.setExpander(3,true)">
+			<span>{{panel.isExpanderClicked(3)===true?"-":"+"}}</span>Cancelled Request
 		</div>
-		<div ng-show="panel.expander">
+		<div ng-show="panel.isExpanderClicked(3)">
 			<p>jqGridTable with cancelled records</p>
-			<p ng-show="panel.expander" align="right"><a href style="color: orange;font-size:11px !important;">Show more</a></p>
+			<p ng-show="panel.isExpanderClicked(3)" align="right"><a href style="color: orange;font-size:11px !important;">Show more</a></p>
 		</div>
 	</div>
 
