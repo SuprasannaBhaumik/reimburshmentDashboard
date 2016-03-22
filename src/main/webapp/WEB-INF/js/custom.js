@@ -41,10 +41,10 @@ myApp.controller("PanelController",function($scope){
 			this.defaultExpander.symbol="+";
 			this.defaultExpander.initValue=0;
 		}
-	}
+	};
 	this.isExpanderClicked=function(expVal){
 		return this.defaultExpander.initValue===expVal;
-	}
+	};
 	
 	
 });
