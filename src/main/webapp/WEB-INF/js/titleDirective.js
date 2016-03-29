@@ -3,7 +3,7 @@ angular.module('title',[]).directive('title',function(){
 		scope:true,
 		restrict:'E',
 		link:function(scope,e,a){
-			scope.renderValue=e.value;
+			scope.renderValue=a.value;
 		},
 		template:"<h1>{{renderValue}}</h1>"	
 	}
