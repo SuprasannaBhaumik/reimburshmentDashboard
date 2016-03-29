@@ -10,7 +10,7 @@
 
 <body>
 	
-	<title value="${title}"></title>
+	<myHeader value="${title}"></myHeader>
 
 	<sec:authorize access="permitAll">
 		<!-- For login user -->
