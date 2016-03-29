@@ -1,0 +1,10 @@
+angular.module('myDirectives',[]).directive('title',function(){
+	return{
+		scope:true,
+		restrict:'E',
+		link:function(scope,e,a){
+			scope.renderValue=a.value;
+		},
+		template:"<h1>{{renderValue}}</h1>"	
+	}
+});

@@ -3,8 +3,14 @@
 <%@taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<script type="text/javascript"
+	src="https://rawgit.com/SuprasannaBhaumik/reimburshmentDashboard/master/src/main/webapp/WEB-INF/js/myDirective.js"></script>
+
+
 <body>
-	<h1>${title}</h1>
+	
+	<title value="${title}"></title>
 
 	<sec:authorize access="permitAll">
 		<!-- For login user -->
