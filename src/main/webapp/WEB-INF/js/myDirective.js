@@ -3,7 +3,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		scope:true,
 		restrict:'E',
 		link:function(scope,e,a){
-			scope.renderValue=a.value;
+			scope.renderValue=a.heading;
 		},
 		replace:true,
 		template:"<h1>{{renderValue}}</h1>"	
