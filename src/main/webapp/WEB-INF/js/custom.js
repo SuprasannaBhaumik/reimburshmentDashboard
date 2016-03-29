@@ -1,4 +1,4 @@
-var myApp = angular.module("myModule",[]);
+var myApp = angular.module("myModule",['title']);
 
 
 /*myApp.controller("myController",function($scope){
