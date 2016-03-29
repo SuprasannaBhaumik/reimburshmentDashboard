@@ -4,6 +4,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		restrict:'E',
 		link:function(scope,e,a){
 			scope.renderValue=a.heading;
+			console.log("checking:::"+scope.renderValue);
 		},
 		replace:true,
 		template:"<h1>{{renderValue}}</h1>"	
