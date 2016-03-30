@@ -33,20 +33,20 @@ jQuery(document).ready(function($) {
 	jQuery("#last5TransGrid").jqGrid({
 		datatype : "local",
 		data:$("#last5TransGrid").attr('initdata').toString(),
-		colNames : [ 'Claim No', 'Claim Date', 'Status' ],
+		colNames : [ 'Request Id', 'Request Status', 'Request Date' ],
 		colModel : [ {
-			name : 'Issue',
-			index : 'Issue',
+			name : 'requestId',
+			index : 'requestId',
 			width : 60,
 			sorttype : "int"
 		}, {
-			name : 'Description',
-			index : 'Description',
+			name : 'requestStatus',
+			index : 'requestStatus',
 			width : 60,
 			sortable : false
 		}, {
-			name : 'Status',
-			index : 'Status',
+			name : 'requestDate',
+			index : 'requestDate',
 			width : 60,
 			sorttype : "string"
 		}, ],
