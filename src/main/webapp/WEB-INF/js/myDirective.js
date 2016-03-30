@@ -18,7 +18,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		link:function(scope,e,a){
 			scope.userName=a.user;
 		},
-		replace:true,
+		replace:false,
 		template:"<p>{{userName}}</p>| <a href=&quot;javascript:formSubmit()&quot;> Logout</a>"
 	}
 	
