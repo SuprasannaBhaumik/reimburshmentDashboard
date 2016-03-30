@@ -15,8 +15,8 @@
 <link rel="stylesheet" type="text/css"
 	href="http://www.trirand.com/blog/jqgrid/themes/ui.jqgrid.css" />
 
-<link rel="stylesheet" type="text/css"
-	href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" />
+<!-- <link rel="stylesheet" type="text/css"
+	href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" /> -->
 <!-- https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css -->
 
 <script
