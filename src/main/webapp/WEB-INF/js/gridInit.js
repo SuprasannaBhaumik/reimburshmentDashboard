@@ -28,12 +28,6 @@ jQuery(document).ready(function($) {
 
 	var updateIdsOfSelectedRows;
 
-	var newJson = $("#last5TransGrid").attr('initdata');
-	console.log("newJson:::"+newJson);
-	var regex = new RegExp("\'", 'g');
-	newJson = newJson.replace(regex, '"');
-	console.log("newJson:::"+newJson);
-	
 	jQuery("#last5TransGrid").jqGrid({
 		datatype : "local",
 		// data:releaseTrackerJSON,
@@ -70,11 +64,23 @@ jQuery(document).ready(function($) {
 				// updateIdsOfSelectedRows(id, status);
 			}
 		}
-
+		
 	});
 
+	var newJson = $("#last5TransGrid").attr('initdata');
+	console.log("newJson:::"+newJson);
+	var regex = new RegExp("\'", 'g');
+	newJson = newJson.replace(regex, '"');
+	console.log("newJson:::"+newJson);
+	var change = JSON.parse(newJson);
+	
+	console.log("change:::"+change);
+	
 	$("#last5TransGrid").jqGrid('setGridParam', {
-		data : newJson,
+		data : change,
 		datatype : 'local'
 	}).trigger('reloadGrid');
+	
+
+	
 });
