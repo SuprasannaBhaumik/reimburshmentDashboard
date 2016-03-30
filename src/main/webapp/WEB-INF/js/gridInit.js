@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
 	//get first grid to populate with issues occurring in present week
 	jQuery("#last5TransGrid").jqGrid({
 		datatype : "json",
-		data:$("#last5TransGrid").attr('initdata').toString(),
+		data:$("#last5TransGrid").attr('initdata'),
 		colNames : [ 'Request Id', 'Request Status', 'Request Date' ],
 		colModel : [ {
 			name : 'requestId',
