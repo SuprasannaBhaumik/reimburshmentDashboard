@@ -28,11 +28,15 @@ jQuery(document).ready(function($) {
 
 	var updateIdsOfSelectedRows;
 
+	var releaseTrackerJSON = ${initDataForEmpSubsLastFive};
+	console.log(releaseTrackerJSON);
+	var newJson = $("#last5TransGrid").attr('initdata');
+	console.log(newJson);
 	//declaring the grids
 	//get first grid to populate with issues occurring in present week
 	jQuery("#last5TransGrid").jqGrid({
 		datatype : "local",
-		data:$("#last5TransGrid").attr('initdata'),
+		data:releaseTrackerJSON,
 		colNames : [ 'Request Id', 'Request Status', 'Request Date' ],
 		colModel : [ {
 			name : 'requestId',
