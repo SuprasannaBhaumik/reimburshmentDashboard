@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
 		height : "40%",
 		rows : 5,
 		width : 625,
-		// caption: "Issue Grid : ERPs raised for the time period "+startDate+"
+		caption: "Employee Last 5 Claims Submitted Status",
 		// - " +endDate,
 		onSelectRow : function(rowid, status) {
 			// updateIdsOfSelectedRows(rowid, status,'First');
@@ -68,13 +68,9 @@ jQuery(document).ready(function($) {
 	});
 
 	var newJson = $("#last5TransGrid").attr('initdata');
-	console.log("newJson:::"+newJson);
 	var regex = new RegExp("\'", 'g');
 	newJson = newJson.replace(regex, '"');
-	console.log("newJson:::"+newJson);
 	var change = JSON.parse(newJson);
-	
-	console.log("change:::"+change);
 	
 	$("#last5TransGrid").jqGrid('setGridParam', {
 		data : change,
