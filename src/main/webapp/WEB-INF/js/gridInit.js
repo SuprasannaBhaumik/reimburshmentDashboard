@@ -67,4 +67,6 @@ jQuery(document).ready(function($) {
 		}
 
 	});
+	
+	 $("#last5TransGrid").trigger("reloadGrid");
 });
