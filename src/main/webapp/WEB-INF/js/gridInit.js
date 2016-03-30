@@ -29,10 +29,10 @@ jQuery(document).ready(function($) {
 	var updateIdsOfSelectedRows;
 
 	//declaring the grids
-	//get first grid to populate with issues occuring in present week
+	//get first grid to populate with issues occurring in present week
 	jQuery("#last5TransGrid").jqGrid({
 		datatype : "local",
-		//data:response_json.dateERPList,
+		data:$("#last5TransGrid").attr('initData'),
 		colNames : [ 'Claim No', 'Claim Date', 'Status' ],
 		colModel : [ {
 			name : 'Issue',

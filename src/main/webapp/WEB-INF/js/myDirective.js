@@ -7,12 +7,9 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 			console.log("checking:::"+scope.renderValue);
 		},
 		template:"<h1>{{renderValue}}</h1>"	
-		//replace:true,
 	}
 }).directive('loggedEntity',function(){
-	
 	return{
-		
 		scope:{},
 		restrict:'E',
 		link:function(scope,e,a){
@@ -21,5 +18,4 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		replace:false,
 		template:"<p align=right>{{userName}} | <a href=javascript:formSubmit()> Logout</a></p>"
 	}
-	
 });
