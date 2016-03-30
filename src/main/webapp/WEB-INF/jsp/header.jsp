@@ -27,16 +27,10 @@
 
 		<c:choose>
 			<c:when test="${pageContext.request.userPrincipal.name != null}">
-				
 				<logged-entity user="${pageContext.request.userPrincipal.name}"></logged-entity>
-				
-				<p>${pageContext.request.userPrincipal.name}
-					| <a href="javascript:formSubmit()"> Logout</a>
-				</p>
 			</c:when>
 			<c:otherwise>
-				<p align="right">Tom Cruise  | <a href="javascript:formSubmit()"> Logout</a>
-				</p>
+				<logged-entity user="Tom Cruise"></logged-entity>
 			</c:otherwise>
 		</c:choose>
 	</sec:authorize>
