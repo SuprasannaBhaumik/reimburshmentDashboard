@@ -30,9 +30,10 @@ jQuery(document).ready(function($) {
 
 	var newJson = $("#last5TransGrid").attr('initdata');
 	console.log("newJson:::"+newJson);
-
-	// declaring the grids
-	// get first grid to populate with issues occurring in present week
+	var regex = new RegExp("\'", 'g');
+	newJson = newJson.replace(regex, '"');
+	
+	
 	jQuery("#last5TransGrid").jqGrid({
 		datatype : "local",
 		// data:releaseTrackerJSON,
