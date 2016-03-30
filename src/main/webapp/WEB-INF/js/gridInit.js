@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
 	console.log("newJson:::"+newJson);
 	var regex = new RegExp("\'", 'g');
 	newJson = newJson.replace(regex, '"');
-	
+	console.log("newJson:::"+newJson);
 	
 	jQuery("#last5TransGrid").jqGrid({
 		datatype : "local",
