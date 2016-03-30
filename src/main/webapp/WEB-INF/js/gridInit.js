@@ -72,9 +72,8 @@ jQuery(document).ready(function($) {
 
 	});
 
-	var resp = JSON.parse(newJson);
 	$("#last5TransGrid").jqGrid('setGridParam', {
-		data : resp,
+		data : newJson,
 		datatype : 'local'
 	}).trigger('reloadGrid');
 });
