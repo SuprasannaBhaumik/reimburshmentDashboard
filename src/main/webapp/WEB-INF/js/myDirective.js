@@ -19,7 +19,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 			scope.userName=a.user;
 		},
 		replace:false,
-		template:"<div align=&quot;right&quot;><p>{{userName}}</p>| <a href=&quot;javascript:formSubmit()&quot;> Logout</a></div>"
+		template:"<p align=right>{{userName}} | <a href=javascript:formSubmit()> Logout</a></p>"
 	}
 	
 });
