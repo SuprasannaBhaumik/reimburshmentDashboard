@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
 	//declaring the grids
 	//get first grid to populate with issues occurring in present week
 	jQuery("#last5TransGrid").jqGrid({
-		datatype : "local",
+		datatype : "json",
 		data:$("#last5TransGrid").attr('initdata').toString(),
 		colNames : [ 'Request Id', 'Request Status', 'Request Date' ],
 		colModel : [ {
