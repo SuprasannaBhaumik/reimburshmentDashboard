@@ -10,7 +10,7 @@
 
 <body>
 	
-	<myHeader heading="${title}"></myHeader>
+	<my-Header heading="${title}"></my-Header>
 
 	<sec:authorize access="permitAll">
 		<!-- For login user -->
@@ -27,6 +27,9 @@
 
 		<c:choose>
 			<c:when test="${pageContext.request.userPrincipal.name != null}">
+				
+				<logged-entity user="${pageContext.request.userPrincipal.name}"></logged-entity>
+				
 				<p>${pageContext.request.userPrincipal.name}
 					| <a href="javascript:formSubmit()"> Logout</a>
 				</p>
