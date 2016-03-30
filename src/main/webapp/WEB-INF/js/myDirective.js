@@ -16,10 +16,10 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		scope:{},
 		restrict:'E',
 		link:function(scope,e,a){
-			scope.renderValue=a.user;
+			scope.userName=a.user;
 		},
 		replace:true,
-		template:"<p>{{renderValue}}</p>| <a href=&quot;javascript:formSubmit()&quot;> Logout</a>"
+		template:"<p>{{userName}}</p>| <a href=&quot;javascript:formSubmit()&quot;> Logout</a>"
 	}
 	
 });
