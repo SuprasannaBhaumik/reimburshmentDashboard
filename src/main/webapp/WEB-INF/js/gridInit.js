@@ -28,19 +28,14 @@ jQuery(document).ready(function($) {
 
 	var updateIdsOfSelectedRows;
 
-	
 	var newJson = $("#last5TransGrid").attr('initdata');
-	console.log(newJson);
-	
-	
-	var resp = JSON.parse(newJson);
-	 $("#last5TransGrid").jqGrid('setGridParam',{data:resp,datatype:'local'}).trigger('reloadGrid');
-	
-	//declaring the grids
-	//get first grid to populate with issues occurring in present week
+	console.log("newJson:::"+newJson);
+
+	// declaring the grids
+	// get first grid to populate with issues occurring in present week
 	jQuery("#last5TransGrid").jqGrid({
 		datatype : "local",
-		//data:releaseTrackerJSON,
+		// data:releaseTrackerJSON,
 		colNames : [ 'Request Id', 'Request Status', 'Request Date' ],
 		colModel : [ {
 			name : 'requestId',
@@ -62,19 +57,24 @@ jQuery(document).ready(function($) {
 		height : "40%",
 		rows : 5,
 		width : 625,
-		//caption: "Issue Grid : ERPs raised for the time period "+startDate+" - " +endDate,
+		// caption: "Issue Grid : ERPs raised for the time period "+startDate+"
+		// - " +endDate,
 		onSelectRow : function(rowid, status) {
-			//updateIdsOfSelectedRows(rowid, status,'First');
+			// updateIdsOfSelectedRows(rowid, status,'First');
 		},
 		onSelectAll : function(aRowids, status) {
 			var i, count, id;
 			for (i = 0, count = aRowids.length; i < count; i++) {
 				id = aRowids[i];
-				//updateIdsOfSelectedRows(id, status);
+				// updateIdsOfSelectedRows(id, status);
 			}
 		}
 
 	});
-	
-	 $("#last5TransGrid").trigger("reloadGrid");
+
+	var resp = JSON.parse(newJson);
+	$("#last5TransGrid").jqGrid('setGridParam', {
+		data : resp,
+		datatype : 'local'
+	}).trigger('reloadGrid');
 });
