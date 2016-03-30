@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
 			sorttype : "string"
 		}, ],
 		multiselect : true,
-		height : auto,
+		height : "auto",
 		rows : 5,
 		width : 625,
 		caption: "Employee Last 5 Claims Submitted Status",
