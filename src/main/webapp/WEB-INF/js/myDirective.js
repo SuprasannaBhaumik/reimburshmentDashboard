@@ -43,7 +43,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		link:function(scope,e,a){
 			//scope.renderValue=a.heading;
 		},
-		template:"<p><b>Requestor Email</b> : <input type=text ng-model=reqEmail/></p>"	
+		template:"<p><b>Requestor Email</b> : <input type=email ng-model=reqEmail/></p>"	
 	}
 	
 }).directive('claimManageremail', function() {
@@ -53,7 +53,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		link:function(scope,e,a){
 			//scope.renderValue=a.heading;
 		},
-		template:"<p><b>Manager Email</b> : <input type=text ng-model=reqManagerEmail/></p>"	
+		template:"<p><b>Manager Email</b> : <input type=email ng-model=reqManagerEmail/></p>"	
 	}
 	
 }).directive('claimId', function() {
