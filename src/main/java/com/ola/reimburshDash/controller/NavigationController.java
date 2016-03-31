@@ -8,11 +8,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class NavigationController {
 
-	@RequestMapping(value="/reqCreatPage", method=RequestMethod.GET)
+	@RequestMapping(value="/reqCreatePage", method=RequestMethod.GET)
 	public ModelAndView createRequest(){
 		ModelAndView model = new ModelAndView();
-		//model.setViewName("requestCreation");
-		model.setViewName("newReqPage");
+		model.setViewName("requestCreation");
+		//model.setViewName("newReqPage");
 		return model;
 	}
 	
