@@ -4,7 +4,6 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		restrict:'E',
 		link:function(scope,e,a){
 			scope.renderValue=a.heading;
-			console.log("checking:::"+scope.renderValue);
 		},
 		template:"<h1>{{renderValue}}</h1>"	
 	}
@@ -86,4 +85,14 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		template:"<p><b>Request Date</b> : <input type=date ng-model=reqDt required/></p>"	
 	}
 	
+}).controller('validationController',function($scope){
+	
+	$scope.submitForm=function(){
+		if ($scope.userForm.$valid) {
+            alert('our form is amazing');
+        }
+	}
 });
+
+
+
