@@ -23,7 +23,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		restrict:'E',
 		link:function(scope,e,a){
 		},
-		template:"<p><b>Requestor Name</b> : <input type=text ng-model=reqName required/></p>"	
+		template:"<p><b>Requestor Name</b> : <input type=text ng-model=reqName/></p>"	
 	}
 }).directive('claimTelephone', function() {
 	return{
@@ -32,7 +32,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		link:function(scope,e,a){
 			//scope.renderValue=a.heading;
 		},
-		template:"<p><b>Requestor Telephone</b> : <input type=number ng-model=reqTel required/></p>"	
+		template:"<p><b>Requestor Telephone</b> : <input type=number ng-model=reqTel/></p>"	
 	}
 	
 }).directive('claimRequestoremail', function() {
@@ -42,7 +42,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		link:function(scope,e,a){
 			//scope.renderValue=a.heading;
 		},
-		template:"<p><b>Requestor Email</b> : <input type=email ng-model=reqEmail required/></p>"	
+		template:"<p><b>Requestor Email</b> : <input type=email ng-model=reqEmail/></p>"	
 	}
 	
 }).directive('claimManageremail', function() {
@@ -52,7 +52,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		link:function(scope,e,a){
 			//scope.renderValue=a.heading;
 		},
-		template:"<p><b>Manager Email</b> : <input type=email ng-model=reqManagerEmail required/></p>"	
+		template:"<p><b>Manager Email</b> : <input type=email ng-model=reqManagerEmail/></p>"	
 	}
 	
 }).directive('claimId', function() {
@@ -62,7 +62,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		link:function(scope,e,a){
 			//scope.renderValue=a.heading;
 		},
-		template:"<p><b>Claim Id</b> : <input type=text ng-model=reqId required/></p>"	
+		template:"<p><b>Claim Id</b> : <input type=text ng-model=reqId/></p>"	
 	}
 	
 }).directive('claimAmount', function() {
@@ -72,7 +72,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		link:function(scope,e,a){
 			//scope.renderValue=a.heading;
 		},
-		template:"<p><b>Claim Amount</b> : <input type=number ng-model=reqAmt required/></p>"	
+		template:"<p><b>Claim Amount</b> : <input type=number ng-model=reqAmt/></p>"	
 	}
 	
 }).directive('claimDate', function() {
@@ -82,7 +82,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		link:function(scope,e,a){
 			//scope.renderValue=a.heading;
 		},
-		template:"<p><b>Request Date</b> : <input type=date ng-model=reqDt required/></p>"	
+		template:"<p><b>Request Date</b> : <input type=text ng-model=reqDt/></p>"	
 	}
 	
 }).controller('validationController',function($scope){
