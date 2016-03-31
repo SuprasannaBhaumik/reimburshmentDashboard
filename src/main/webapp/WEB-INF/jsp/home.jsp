@@ -70,8 +70,8 @@ body {
 				<span>{{panel.isExpanderClicked(4)===true?"-":"+"}}</span>Last 5
 				transactions
 			</div>
-			<div ng-show="panel.isExpanderClicked(4)">
-				<table id="last5TransGrid">
+			<div ng-show="panel.isExpanderClicked(4)" >
+				<table id="last5TransGrid" initdata="${initDataForEmpSubsLastFive}" >
 					<tr>
 						<td />
 					</tr>
@@ -86,7 +86,7 @@ body {
 				<span>{{panel.isExpanderClicked(5)===true?"-":"+"}}</span>Submit New
 			</div>
 			<div ng-show="panel.isExpanderClicked(5)">
-				<a target="_blank" href="http://www.google.com">Link to New
+				<a target="_blank" href="/reimburshmentDashboard/reqCreatPage">Link to New
 					Window</a>
 			</div>
 		</div>
