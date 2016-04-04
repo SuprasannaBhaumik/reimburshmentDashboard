@@ -86,7 +86,7 @@ body {
 				<span>{{panel.isExpanderClicked(5)===true?"-":"+"}}</span>Submit New
 			</div>
 			<div ng-show="panel.isExpanderClicked(5)">
-				<a target="_blank" href="/reimburshmentDashboard/reqCreatPage">Link to New
+				<a target="_blank" href="/reimburshmentDashboard/reqCreatePage">Link to New
 					Window</a>
 			</div>
 		</div>
