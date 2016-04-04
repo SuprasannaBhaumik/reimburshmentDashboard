@@ -42,7 +42,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		link:function(scope,e,a){
 			//scope.renderValue=a.heading;
 		},
-		template:"<p><b>Requestor Email</b> : <input ng-model=reqEmail type=email required /></p>"	
+		template:"<p><b>Requestor Email</b> : <input ng-model=reqEmail type=email ng-pattern=/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/ required /></p>"	
 	}
 	
 }).directive('claimManageremail', function() {
@@ -52,7 +52,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 		link:function(scope,e,a){
 			//scope.renderValue=a.heading;
 		},
-		template:"<p><b>Manager Email</b> : <input ng-model=reqManagerEmail type=email required /></p>"	
+		template:"<p><b>Manager Email</b> : <input ng-model=reqManagerEmail type=email ng-pattern=/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/ required /></p>"	
 	}
 	
 }).directive('claimId', function() {
@@ -86,6 +86,7 @@ angular.module('myDirectives',[]).directive('myHeader',function(){
 	}
 
 }).controller('validationController',function($scope){
+	
 	$scope.submitForm=function(product){
 		console.log("entries are ::: ");
 		console.log("user name ::: "+product.reqName);
